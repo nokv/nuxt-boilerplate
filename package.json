@@ -22,26 +22,26 @@
     "ie 11"
   ],
   "dependencies": {
-    "@nuxt/typescript-runtime": "^0.4.10",
-    "@nuxtjs/pwa": "^3.0.0-beta.20",
-    "nuxt": "^2.13.0"
+    "@nuxt/typescript-runtime": "0.4.10",
+    "@nuxtjs/pwa": "3.0.0-beta.20",
+    "nuxt": "2.13.1"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "^1.0.3",
-    "@nuxtjs/dotenv": "^1.4.1",
-    "@nuxtjs/eslint-config": "^3.0.0",
-    "@nuxtjs/eslint-config-typescript": "^2.0.0",
-    "@nuxtjs/eslint-module": "^2.0.0",
-    "@nuxtjs/style-resources": "^1.0.0",
-    "babel-eslint": "^10.1.0",
-    "core-js": "^3.6.5",
-    "cross-env": "^7.0.2",
-    "eslint": "^7.2.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-nuxt": "^1.0.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "postcss-css-variables": "^0.17.0",
-    "prettier": "^2.0.5",
-    "ress": "^2.0.4"
+    "@nuxt/typescript-build": "1.0.3",
+    "@nuxtjs/dotenv": "1.4.1",
+    "@nuxtjs/eslint-config": "3.0.0",
+    "@nuxtjs/eslint-config-typescript": "2.0.0",
+    "@nuxtjs/eslint-module": "2.0.0",
+    "@nuxtjs/style-resources": "1.0.0",
+    "babel-eslint": "10.1.0",
+    "core-js": "3.6.5",
+    "cross-env": "7.0.2",
+    "eslint": "7.3.1",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-nuxt": "1.0.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "postcss-css-variables": "0.17.0",
+    "prettier": "2.0.5",
+    "ress": "2.0.4"
   }
 }
