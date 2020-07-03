@@ -1,5 +1,6 @@
 import { Configuration } from '@nuxt/types';
-require('dotenv').config();
+const envPath = `env/.env.${process.env.NODE_ENV || 'development'}`;
+require('dotenv').config({ path: envPath });
 
 const environment = process.env.NODE_ENV || 'development';
 const isDev = environment === 'development';
@@ -25,7 +26,7 @@ const config: Configuration = {
         fallback: true,
     },
     router: {
-        base: process.env.base || '',
+        base: process.env.URL_BASE || '',
     },
 
     /*
@@ -46,13 +47,14 @@ const config: Configuration = {
             { hid: 'X-UA-Compatible', 'http-equiv': 'X-UA-Compatible', content: 'ie=edge' },
             { hid: 'og:type', property: 'og:type', content: 'website' },
             { hid: 'og:locale', property: 'og:locale', content: 'ja_JP' },
-            { hid: 'og:url', property: 'og:url', content: process.env.url + '' },
-            { hid: 'og:image', property: 'og:image', content: process.env.url + '/img/ogp.png' },
+            { hid: 'og:url', property: 'og:url', content: `${process.env.URL}` },
+            { hid: 'og:image', property: 'og:image', content: `${process.env.URL}/img/ogp.jpg` },
             { hid: 'og:site_name', property: 'og:site_name', content: title },
             { hid: 'og:title', property: 'og:title', content: title },
             { hid: 'og:description', property: 'og:description', content: description },
             { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
-            { name: 'twitter:site', content: '' },
+            { hid: 'twitter:site', property: 'twitter:site', content: '@' },
+            { hid: 'twitter:creator', property: 'twitter:creator', content: '@' },
             { hid: 'google-site-verification', name: 'google-site-verification', content: '' },
             { property: 'apple-mobile-web-app-title', content: title },
             { property: 'application-name', content: title },
@@ -63,7 +65,7 @@ const config: Configuration = {
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-            { hid: 'canonical', rel: 'canonical', href: process.env.url },
+            { hid: 'canonical', rel: 'canonical', href: process.env.URL },
         ],
         script: [],
     },
@@ -121,7 +123,7 @@ const config: Configuration = {
                     handler: 'cacheFirst',
                 },
                 {
-                    urlPattern: process.env.base || '' + '.*',
+                    urlPattern: process.env.URL_BASE || '' + '.*',
                     handler: 'staleWhileRevalidate',
                     strategyOptions: {
                         cacheName: 'my-cache',
