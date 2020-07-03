@@ -65,3 +65,7 @@ export default Vue.extend({})
   padding-top: 15px;
 }
 </style>
+
+<style lang="scss" scoped>
+@import '~/assets/styles/_test';
+</style>
