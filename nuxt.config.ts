@@ -66,7 +66,7 @@ const config: NuxtConfig = {
             { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            { rel: 'icon', type: 'image/x-icon', href: `${process.env.URL_BASE}/favicon.ico` },
             { hid: 'canonical', rel: 'canonical', href: process.env.URL },
         ],
         script: [],
