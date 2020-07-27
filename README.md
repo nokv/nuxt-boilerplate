@@ -1,4 +1,4 @@
-# hello world
+# Nuxt Typescript Template
 
 ## Build Setup
 
