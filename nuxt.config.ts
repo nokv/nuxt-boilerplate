@@ -1,4 +1,4 @@
-import { Configuration } from '@nuxt/types';
+import { NuxtConfig } from '@nuxt/types';
 const envPath = `env/.env.${process.env.NODE_ENV || 'development'}`;
 require('dotenv').config({ path: envPath });
 
@@ -9,7 +9,7 @@ const isDev = environment === 'development';
 const title = '';
 const description = '';
 
-const config: Configuration = {
+const config: NuxtConfig = {
     /*
      ** Nuxt rendering mode
      ** See https://nuxtjs.org/api/configuration-mode
