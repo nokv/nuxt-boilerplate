@@ -36,8 +36,8 @@
     "@nuxtjs/eslint-config-typescript": "2.0.0",
     "@nuxtjs/eslint-module": "2.0.0",
     "@nuxtjs/style-resources": "1.0.0",
-    "@types/fibers": "^3.1.0",
-    "@types/sass": "^1.16.0",
+    "@types/fibers": "3.1.0",
+    "@types/sass": "1.16.0",
     "babel-eslint": "10.1.0",
     "core-js": "3.6.5",
     "cross-env": "7.0.2",
@@ -45,11 +45,11 @@
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-nuxt": "1.0.0",
     "eslint-plugin-prettier": "3.1.4",
-    "fibers": "^5.0.0",
+    "fibers": "5.0.0",
     "postcss-css-variables": "0.17.0",
     "prettier": "2.0.5",
     "ress": "3.0.0",
-    "sass": "^1.26.10",
+    "sass": "1.26.10",
     "sass-loader": "9.0.2"
   }
 }
