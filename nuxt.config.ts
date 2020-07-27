@@ -1,6 +1,8 @@
 import { NuxtConfig } from '@nuxt/types';
 const envPath = `env/.env.${process.env.NODE_ENV || 'development'}`;
 require('dotenv').config({ path: envPath });
+import Sass from 'sass';
+import Fiber from 'fibers';
 
 const environment = process.env.NODE_ENV || 'development';
 const isDev = environment === 'development';
@@ -167,6 +169,14 @@ const config: NuxtConfig = {
         extend(config) {
             config.devtool = !isDev ? false : 'source-map';
             config.mode = isDev ? 'development' : 'production';
+        },
+        loaders: {
+            scss: {
+                implementation: Sass,
+                sassOptions: {
+                    fiber: Fiber,
+                },
+            },
         },
         babel: {
             presets({ isServer }) {
