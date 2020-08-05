@@ -14,8 +14,7 @@ $ yarn build
 $ yarn start
 
 # generate static project
-$ yarn build
-$ yarn export
+$ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
