@@ -14,10 +14,7 @@ const title = '';
 const description = '';
 
 const config: NuxtConfig = {
-    /*
-     ** Nuxt target
-     ** See https://nuxtjs.org/api/configuration-target
-     */
+    // Nuxt target (https://nuxtjs.org/api/configuration-target)
     target: 'static',
     ssr: true,
 
@@ -32,10 +29,7 @@ const config: NuxtConfig = {
         crossorigin: 'use-credentials',
     },
 
-    /*
-     ** Headers of the page
-     ** See https://nuxtjs.org/api/configuration-head
-     */
+    // Global page headers (https://go.nuxtjs.dev/config-head)
     head: {
         htmlAttrs: {
             lang: 'ja',
@@ -72,30 +66,30 @@ const config: NuxtConfig = {
         ],
         script: [],
     },
-    /*
-     ** Customize the progress-bar color
-     */
+
+    // Customize the progress-bar color
     loading: { color: '#fff', continuous: true },
-    /*
-     ** Global CSS
-     */
-    css: ['ress'],
+
+    // Global CSS (https://go.nuxtjs.dev/config-css)
+    css: ['ress', '~/assets/styles/main.scss'],
+
     styleResources: {
-        scss: [],
+        scss: [
+            '~/assets/styles/modules/_fluid_style.scss',
+            '~/assets/styles/base/_variables.scss',
+            '~/assets/styles/base/_variables_easing.scss',
+            '~/assets/styles/modules/_mixin_mq.scss',
+            '~/assets/styles/modules/_utils.scss',
+        ],
     },
-    /*
-     ** Plugins to load before mounting the App
-     ** https://nuxtjs.org/guide/plugins
-     */
+
+    // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
     plugins: [],
-    /*
-     ** Auto import components
-     ** See https://nuxtjs.org/api/configuration-components
-     */
+
+    // Auto import components (https://go.nuxtjs.dev/config-components)
     components: true,
-    /*
-     ** Nuxt.js dev-modules
-     */
+
+    // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
     buildModules: [
         '@nuxt/typescript-build',
         [
@@ -106,17 +100,15 @@ const config: NuxtConfig = {
         ],
     ],
     serverMiddleware: [],
-    /*
-     ** Nuxt.js modules
-     */
+
+    // Modules (https://go.nuxtjs.dev/config-modules)
     modules: [
-        // Doc: https://axios.nuxtjs.org/usage
+        // https://go.nuxtjs.dev/pwa
         '@nuxtjs/pwa',
         '@nuxtjs/style-resources',
     ],
-    /*
-     ** PWA config
-     */
+
+    // PWA config
     pwa: {
         workbox: {
             dev: false,
@@ -151,10 +143,8 @@ const config: NuxtConfig = {
             start_url: '/?utm_source=pwa_app',
         },
     },
-    /*
-     ** Build configuration
-     ** See https://nuxtjs.org/api/configuration-build/
-     */
+
+    // Build Configuration (https://go.nuxtjs.dev/config-build)
     build: {
         filenames: {
             app: () => (!isDev ? '[name].[chunkhash:7].js' : '[name].js'),

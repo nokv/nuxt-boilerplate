@@ -1,4 +1,4 @@
-# Nuxt Typescript Template
+# Nuxt Template
 
 ## Build Setup
 

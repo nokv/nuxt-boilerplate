@@ -1,0 +1,30 @@
+@import '../modules/mixin_mq';
+
+// Design sizes
+$pc-base-size: 1400;
+$sp-base-size: 750;
+
+// Breakpoints
+$break-point-pc: 1440px;
+$break-point-tablet: 1024px;
+$break-point-mobile: 768px;
+
+// Fonts
+$font-family-default: '游ゴシック', 'Yu Gothic', '游ゴシック体', 'YuGothic', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+
+// Colors
+$color-black: #000000;
+$color-white: #ffffff;
+
+// z-index
+$z-header: 100;
+
+// CSS Variables
+:root {
+    --base-size: #{$pc-base-size};
+
+    @include mq-mobile {
+        --base-size: #{$sp-base-size};
+    }
+}
