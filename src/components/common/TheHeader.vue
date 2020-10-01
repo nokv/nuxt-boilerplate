@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <div class="header__inner">
-            header
+            <h2>header</h2>
         </div>
     </header>
 </template>
