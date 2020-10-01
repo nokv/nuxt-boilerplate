@@ -1,8 +1,8 @@
-import { NuxtConfig } from '@nuxt/types';
-const envPath = `env/.env.${process.env.NODE_ENV || 'development'}`;
-require('dotenv').config({ path: envPath });
+import type { NuxtConfig } from '@nuxt/types';
 import Sass from 'sass';
 import Fiber from 'fibers';
+const envPath = `env/.env.${process.env.NODE_ENV || 'development'}`;
+require('dotenv').config({ path: envPath });
 
 const environment = process.env.NODE_ENV || 'development';
 const isDev = environment === 'development';
@@ -13,15 +13,11 @@ const description = '';
 
 const config: NuxtConfig = {
     /*
-     ** Nuxt rendering mode
-     ** See https://nuxtjs.org/api/configuration-mode
-     */
-    mode: 'universal',
-    /*
      ** Nuxt target
      ** See https://nuxtjs.org/api/configuration-target
      */
     target: 'static',
+    ssr: true,
 
     srcDir: 'src/',
     generate: {
@@ -187,7 +183,7 @@ const config: NuxtConfig = {
                         {
                             buildTarget: isServer ? 'server' : 'client',
                             useBuiltIns: 'usage',
-                            corejs: { version: 3 },
+                            corejs: { version: '3.6' },
                         },
                     ],
                 ];
@@ -211,7 +207,6 @@ const config: NuxtConfig = {
                 compress: { drop_console: false },
             },
         },
-        publicPath: '/assets/',
         html: {
             minify: {
                 collapseBooleanAttributes: true,
