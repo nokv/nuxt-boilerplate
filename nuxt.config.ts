@@ -1,8 +1,10 @@
 import type { NuxtConfig } from '@nuxt/types';
 import Sass from 'sass';
 import Fiber from 'fibers';
+import { config as dotenvConfig } from 'dotenv';
+
 const envPath = `env/.env.${process.env.NODE_ENV || 'development'}`;
-require('dotenv').config({ path: envPath });
+dotenvConfig({ path: envPath });
 
 const environment = process.env.NODE_ENV || 'development';
 const isDev = environment === 'development';
@@ -25,6 +27,9 @@ const config: NuxtConfig = {
     },
     router: {
         base: process.env.URL_BASE || '',
+    },
+    render: {
+        crossorigin: 'use-credentials',
     },
 
     /*
