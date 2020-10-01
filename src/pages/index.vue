@@ -2,9 +2,7 @@
     <div class="container">
         <div>
             <Logo />
-            <h1 class="title">
-                Hello World
-            </h1>
+            <h1 class="title">Hello World</h1>
             <div class="links">
                 <a href="https://nuxtjs.org/" target="_blank" rel="noopener noreferrer" class="button--green">
                     Documentation
