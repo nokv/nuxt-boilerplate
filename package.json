@@ -27,10 +27,10 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "2.0.0",
     "@nuxtjs/pwa": "3.3.2",
-    "nuxt": "2.14.7"
+    "nuxt": "2.14.12"
   },
   "devDependencies": {
-    "@nuxt/types": "2.14.7",
+    "@nuxt/types": "2.14.12",
     "@nuxt/typescript-build": "2.0.3",
     "@nuxtjs/dotenv": "1.4.1",
     "@nuxtjs/eslint-config": "4.0.0",
