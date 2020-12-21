@@ -157,9 +157,10 @@ const config: NuxtConfig = {
         /*
          ** You can extend webpack config here
          */
-        extend(config) {
-            config.devtool = !isDev ? false : 'source-map';
-            config.mode = isDev ? 'development' : 'production';
+        extend(config, { isClient }) {
+            if (isClient) {
+                config.devtool = !isDev ? false : 'source-map';
+            }
         },
         loaders: {
             scss: {
