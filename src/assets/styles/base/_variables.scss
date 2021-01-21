@@ -1,8 +1,8 @@
 @import '../modules/mixin_mq';
 
 // Design sizes
-$pc-base-size: 1400;
-$sp-base-size: 750;
+$base-size-pc: 1440;
+$base-size-sp: 750;
 
 // Breakpoints
 $break-point-pc: 1440px;
@@ -22,9 +22,8 @@ $z-header: 100;
 
 // CSS Variables
 :root {
-    --base-size: #{$pc-base-size};
-
+    --base-size: #{$base-size-pc};
     @include mq-mobile {
-        --base-size: #{$sp-base-size};
+        --base-size: #{$base-size-sp};
     }
 }

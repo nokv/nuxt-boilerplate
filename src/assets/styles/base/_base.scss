@@ -76,15 +76,15 @@ button {
     display: none;
 }
 
-.sp {
+.sp-only {
     display: none;
+    @include mq-mobile {
+        display: block;
+    }
 }
 
 @include mq-mobile {
-    .sp {
-        display: block;
-    }
-    .pc {
+    .pc-only {
         display: none;
     }
 }
