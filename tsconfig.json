@@ -19,7 +19,7 @@
       "~/*": ["./src/*"],
       "@/*": ["./src/*"]
     },
-    "types": ["@types/node", "@nuxt/types"]
+    "types": ["@types/node", "@nuxt/types", "@nuxtjs/pwa"]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]
 }

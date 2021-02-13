@@ -115,11 +115,11 @@ const config: NuxtConfig = {
             runtimeCaching: [
                 {
                     urlPattern: '^https://fonts.(?:googleapis|gstatic).com/(.*)',
-                    handler: 'cacheFirst',
+                    handler: 'CacheFirst',
                 },
                 {
                     urlPattern: process.env.URL_BASE || '' + '.*',
-                    handler: 'staleWhileRevalidate',
+                    handler: 'StaleWhileRevalidate',
                     strategyOptions: {
                         cacheName: 'my-cache',
                         cacheExpiration: {
@@ -132,10 +132,7 @@ const config: NuxtConfig = {
         manifest: {
             name: title,
             short_name: title,
-            title,
-            'og:title': title,
             description,
-            'og:description': description,
             theme_color: '#ffffff',
             background_color: '#ffffff',
             lang: 'ja',
