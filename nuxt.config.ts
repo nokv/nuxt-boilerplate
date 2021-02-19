@@ -113,11 +113,10 @@ const config: NuxtConfig = {
 
     styleResources: {
         scss: [
-            '~/assets/styles/modules/_fluid_style.scss',
+            '~/assets/styles/function/_fluid_style.scss',
             '~/assets/styles/base/_variables.scss',
             '~/assets/styles/base/_variables_easing.scss',
-            '~/assets/styles/modules/_mixin_mq.scss',
-            '~/assets/styles/modules/_utils.scss',
+            '~/assets/styles/function/_mixin_mq.scss',
         ],
     },
 
@@ -129,6 +128,7 @@ const config: NuxtConfig = {
 
     // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
     buildModules: [
+        '@nuxtjs/style-resources',
         '@nuxt/typescript-build',
         [
             '@nuxtjs/dotenv',
@@ -143,7 +143,6 @@ const config: NuxtConfig = {
     modules: [
         // https://go.nuxtjs.dev/pwa
         '@nuxtjs/pwa',
-        '@nuxtjs/style-resources',
     ],
 
     // PWA config
