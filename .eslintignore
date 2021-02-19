@@ -1,0 +1,4 @@
+/dist/
+.nuxt
+src/static/sw.js
+**/node_modules/**

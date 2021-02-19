@@ -5,13 +5,15 @@ module.exports = {
         node: true,
     },
     extends: [
+        'eslint:recommended',
+        'plugin:nuxt/recommended',
         '@nuxtjs/eslint-config-typescript',
         'prettier',
-        'prettier/vue',
-        'plugin:prettier/recommended',
-        'plugin:nuxt/recommended',
     ],
-    plugins: ['prettier'],
+    plugins: [],
     // add your custom rules here
-    rules: {},
+    rules: {
+        quotes: ['error', 'single'],
+        'vue/html-indent': 'off',
+    },
 };
