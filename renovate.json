@@ -1,5 +1,3 @@
 {
-  "extends": [
-    "@nokl"
-  ]
+  "extends": ["@nokl"]
 }
