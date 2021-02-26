@@ -182,21 +182,27 @@ const config: NuxtConfig = {
     // Build Configuration (https://go.nuxtjs.dev/config-build)
     build: {
         filenames: {
-            app: () => (!isDev ? '[name].[chunkhash:7].js' : '[name].js'),
-            chunk: () => (!isDev ? '[name].[chunkhash:7].js' : '[name].js'),
-            css: () => (!isDev ? '[name].[chunkhash:7].js' : '[name].js'),
+            app: ({ isModern }) =>
+                isDev
+                    ? `[name]${isModern ? '.modern' : ''}.js`
+                    : `[name]${isModern ? '.modern' : ''}.[contenthash:7].js`,
+            chunk: ({ isModern }) =>
+                isDev
+                    ? `[name]${isModern ? '.modern' : ''}.js`
+                    : `[name]${isModern ? '.modern' : ''}.[contenthash:7].js`,
+            css: () => (isDev ? '[name].css' : '[name].[contenthash:7].css'),
             img: () =>
-                !isDev
-                    ? '[path][name].[contenthash:7].[ext]'
-                    : '[path][name].[ext]',
+                isDev
+                    ? '[path][name].[ext]'
+                    : '[path][name].[contenthash:7].[ext]',
             font: () =>
-                !isDev
-                    ? '[path][name].[contenthash:7].[ext]'
-                    : '[path][name].[ext]',
+                isDev
+                    ? '[path][name].[ext]'
+                    : '[path][name].[contenthash:7].[ext]',
             video: () =>
-                !isDev
-                    ? '[path][name].[contenthash:7].[ext]'
-                    : '[path][name].[ext]',
+                isDev
+                    ? '[path][name].[ext]'
+                    : '[path][name].[contenthash:7].[ext]',
         },
         /*
          ** You can extend webpack config here
