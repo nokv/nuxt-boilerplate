@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": {
-    "name": "nokl"
+    "name": "nokv"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development nuxt",
