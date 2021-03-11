@@ -43,12 +43,7 @@ const config: NuxtConfig = {
                 content: 'width=device-width, initial-scale=1',
             },
             { hid: 'description', name: 'description', content: description },
-            // @ts-ignore
-            {
-                hid: 'X-UA-Compatible',
-                'http-equiv': 'X-UA-Compatible',
-                content: 'ie=edge',
-            },
+            { httpEquiv: 'X-UA-Compatible', content: 'ie=edge' },
             { hid: 'og:type', property: 'og:type', content: 'website' },
             { hid: 'og:locale', property: 'og:locale', content: 'ja_JP' },
             {
