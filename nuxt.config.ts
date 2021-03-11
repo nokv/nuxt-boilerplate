@@ -25,9 +25,7 @@ const config: NuxtConfig = {
     router: {
         base: process.env.URL_BASE || '',
     },
-    render: {
-        crossorigin: 'use-credentials',
-    },
+    render: {},
 
     // Global page headers (https://go.nuxtjs.dev/config-head)
     head: {
@@ -208,7 +206,8 @@ const config: NuxtConfig = {
             }
         },
         loaders: {
-            scss: {
+            sass: {
+                // @ts-ignore
                 implementation: Sass,
                 sassOptions: {
                     fiber: Fiber,
@@ -224,7 +223,7 @@ const config: NuxtConfig = {
                         {
                             buildTarget: isServer ? 'server' : 'client',
                             useBuiltIns: 'usage',
-                            corejs: { version: '3.8' },
+                            corejs: { version: '3.9' },
                         },
                     ],
                 ];
