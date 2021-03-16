@@ -7,8 +7,13 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import TheHeader from '~/components/common/TheHeader.vue';
 
-export default Vue.extend({});
+export default Vue.extend({
+    components: {
+        TheHeader,
+    },
+});
 </script>
 
 <style lang="scss" scoped>
