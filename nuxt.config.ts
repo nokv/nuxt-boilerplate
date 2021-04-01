@@ -223,7 +223,7 @@ const config: NuxtConfig = {
                         {
                             buildTarget: isServer ? 'server' : 'client',
                             useBuiltIns: 'usage',
-                            corejs: { version: '3.9' },
+                            corejs: { version: '3.10' },
                         },
                     ],
                 ];
