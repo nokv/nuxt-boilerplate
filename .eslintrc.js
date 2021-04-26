@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config} */
+const config = {
     root: true,
     env: {
         browser: true,
@@ -17,3 +18,4 @@ module.exports = {
         'vue/html-indent': 'off',
     },
 };
+module.exports = config;
