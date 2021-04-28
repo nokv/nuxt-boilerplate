@@ -42,7 +42,7 @@
     "@types/fibers": "3.1.0",
     "@types/sass": "1.16.0",
     "babel-eslint": "10.1.0",
-    "core-js": "3.10.0",
+    "core-js": "3.11.1",
     "cross-env": "7.0.3",
     "eslint": "7.23.0",
     "eslint-config-prettier": "8.1.0",
