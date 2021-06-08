@@ -122,6 +122,7 @@ const config: NuxtConfig = {
     // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
     buildModules: [
         '@nuxtjs/style-resources',
+        // https://go.nuxtjs.dev/typescript
         '@nuxt/typescript-build',
         [
             '@nuxtjs/dotenv',
@@ -129,6 +130,8 @@ const config: NuxtConfig = {
                 filename: `../env/.env.${environment}`,
             },
         ],
+        // https://go.nuxtjs.dev/stylelint
+        '@nuxtjs/stylelint-module',
     ],
     serverMiddleware: [],
 
