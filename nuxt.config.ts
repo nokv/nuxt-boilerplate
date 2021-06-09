@@ -1,10 +1,6 @@
 import type { NuxtConfig } from '@nuxt/types';
 import Sass from 'sass';
 import Fiber from 'fibers';
-import { config as dotenvConfig } from 'dotenv';
-
-const envPath = `env/.env.${process.env.NODE_ENV || 'development'}`;
-dotenvConfig({ path: envPath });
 
 const environment = process.env.NODE_ENV || 'development';
 const isDev = environment === 'development';
@@ -23,7 +19,7 @@ const config: NuxtConfig = {
         fallback: true,
     },
     router: {
-        base: process.env.URL_BASE || '',
+        base: process.env.BASE_URL || '',
     },
     render: {},
 
@@ -91,7 +87,7 @@ const config: NuxtConfig = {
             {
                 rel: 'icon',
                 type: 'image/x-icon',
-                href: `${process.env.URL_BASE}/favicon.ico`,
+                href: `${process.env.BASE_URL}/favicon.ico`,
             },
             { hid: 'canonical', rel: 'canonical', href: process.env.URL },
         ],
@@ -116,6 +112,12 @@ const config: NuxtConfig = {
     // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
     plugins: [],
 
+    publicRuntimeConfig: {
+        url: process.env.URL || '',
+        baseUrl: process.env.BASE_URL || '',
+    },
+    privateRuntimeConfig: {},
+
     // Auto import components (https://go.nuxtjs.dev/config-components)
     components: false,
 
@@ -124,12 +126,6 @@ const config: NuxtConfig = {
         '@nuxtjs/style-resources',
         // https://go.nuxtjs.dev/typescript
         '@nuxt/typescript-build',
-        [
-            '@nuxtjs/dotenv',
-            {
-                filename: `../env/.env.${environment}`,
-            },
-        ],
         // https://go.nuxtjs.dev/stylelint
         '@nuxtjs/stylelint-module',
     ],
@@ -152,7 +148,7 @@ const config: NuxtConfig = {
                     handler: 'CacheFirst',
                 },
                 {
-                    urlPattern: process.env.URL_BASE || '' + '.*',
+                    urlPattern: process.env.BASE_URL || '' + '.*',
                     handler: 'StaleWhileRevalidate',
                     strategyOptions: {
                         cacheName: 'my-cache',
