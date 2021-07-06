@@ -1909,10 +1909,10 @@
     "@types/qs" "*"
     "@types/serve-static" "*"
 
-"@types/fibers@3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@types/fibers/-/fibers-3.1.0.tgz#3afa6d302587f52e63631cf2bc1acca6c0c3f65e"
-  integrity sha512-1o3I9xtk2PZFxwaLCC6gTaBfBZ5rvw/DSZZPK89fwuwO6LNrzSbC6rEs1xI0bQ3fCRWmO+uNJQQeD2J56oTMDg==
+"@types/fibers@3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@types/fibers/-/fibers-3.1.1.tgz#b714d357eebf6aec0bc5d70512e573b89bc84f20"
+  integrity sha512-yHoUi46uika0snoTpNcVqUSvgbRndaIps4TUCotrXjtc0DHDoPQckmyXEZ2bX3e4mpJmyEW3hRhCwQa/ISCPaA==
 
 "@types/file-loader@5.0.0":
   version "5.0.0"
@@ -2045,10 +2045,17 @@
     "@types/sass" "*"
     "@types/webpack" "^4"
 
-"@types/sass@*", "@types/sass@1.16.0":
+"@types/sass@*":
   version "1.16.0"
   resolved "https://registry.yarnpkg.com/@types/sass/-/sass-1.16.0.tgz#b41ac1c17fa68ffb57d43e2360486ef526b3d57d"
   integrity sha512-2XZovu4NwcqmtZtsBR5XYLw18T8cBCnU2USFHTnYLLHz9fkhnoEMoDsqShJIOFsFhn5aJHjweiUUdTrDGujegA==
+  dependencies:
+    "@types/node" "*"
+
+"@types/sass@1.16.1":
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/@types/sass/-/sass-1.16.1.tgz#cf465bd1fea486d0331f760db023de14daf4980d"
+  integrity sha512-iZUcRrGuz/Tbg3loODpW7vrQJkUtpY2fFSf4ELqqkApcS2TkZ1msk7ie8iZPB86lDOP8QOTTmuvWjc5S0R9OjQ==
   dependencies:
     "@types/node" "*"
 
