@@ -31,10 +31,10 @@
   ],
   "dependencies": {
     "@nuxtjs/pwa": "3.3.5",
-    "nuxt": "2.15.6"
+    "nuxt": "2.15.7"
   },
   "devDependencies": {
-    "@nuxt/types": "2.15.6",
+    "@nuxt/types": "2.15.7",
     "@nuxt/typescript-build": "2.1.0",
     "@nuxtjs/eslint-config": "6.0.0",
     "@nuxtjs/eslint-config-typescript": "6.0.0",
