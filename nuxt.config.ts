@@ -206,7 +206,6 @@ const config: NuxtConfig = {
         },
         loaders: {
             sass: {
-                // @ts-ignore
                 implementation: Sass,
                 sassOptions: {
                     fiber: Fiber,
@@ -218,11 +217,10 @@ const config: NuxtConfig = {
                 return [
                     [
                         require.resolve('@nuxt/babel-preset-app'),
-                        // require.resolve('@nuxt/babel-preset-app-edge'), // For nuxt-edge users
                         {
                             buildTarget: isServer ? 'server' : 'client',
                             useBuiltIns: 'usage',
-                            corejs: { version: '3.14' },
+                            corejs: { version: '3.15' },
                         },
                     ],
                 ];
