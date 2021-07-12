@@ -27,7 +27,8 @@
   },
   "browserslist": [
     "last 2 versions",
-    "not ie < 11"
+    "not ie < 11",
+    "not dead"
   ],
   "dependencies": {
     "@nuxtjs/pwa": "3.3.5",
