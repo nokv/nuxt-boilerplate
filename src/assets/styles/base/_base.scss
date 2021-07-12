@@ -4,22 +4,25 @@ html {
 
 body {
     font-family: $font-family-default;
-    color: $color_black;
+    color: $color-black;
     font-size: 1.6em;
-    font-weight: 500;
-    word-spacing: 1px;
+    font-weight: normal;
+    word-spacing: normal;
     line-height: normal;
     letter-spacing: normal;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
+    word-break: break-all;
     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -webkit-print-color-adjust: exact;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    background-repeat: no-repeat;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
     overscroll-behavior: none;
+    scroll-behavior: smooth;
 }
 
 img {
@@ -70,10 +73,6 @@ button {
 .wrapper {
     width: 100%;
     overflow: hidden;
-}
-
-.disnone {
-    display: none;
 }
 
 .sp-only {
