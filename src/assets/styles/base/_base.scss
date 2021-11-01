@@ -1,59 +1,38 @@
+@use '../global' as global;
+
 html {
     font-size: 62.5%;
 }
 
 body {
-    font-family: $font-family-default;
-    color: $color-black;
+    font-family: var(--font-family-default);
+    color: var(--color-default);
     font-size: 1.6em;
-    font-weight: normal;
-    word-spacing: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    word-break: break-all;
+    text-underline-offset: 0.125em;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
     -webkit-print-color-adjust: exact;
     -webkit-tap-highlight-color: transparent;
     background-repeat: no-repeat;
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
-    overscroll-behavior: none;
-    scroll-behavior: smooth;
+    overscroll-behavior-y: none;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    vertical-align: top;
-    object-fit: cover;
-    user-select: none;
-}
-
-picture {
-    user-select: none;
-}
-
-video {
-    width: 100%;
-    outline: none;
-}
-
-ul,
-ol {
-    [class] {
-        list-style: none;
-    }
-}
-
-a,
-a:hover,
-a:visited {
-    outline: none;
+a {
     text-decoration: none;
+
+    &:hover,
+    &:visited {
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline-width: 2px;
+        outline-color: var(--color-default);
+    }
 }
 
 button {
@@ -63,26 +42,43 @@ button {
     outline: none;
     padding: 0;
     appearance: none;
+
+    &:focus {
+        outline-width: 2px;
+        outline-color: var(--color-default);
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    object-fit: cover;
+    user-select: none;
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+:focus:not(:focus-visible) {
+    outline: 0;
 }
 
 ::selection {
-    background-color: $color-black;
-    color: $color-white;
-}
-
-.wrapper {
-    width: 100%;
-    overflow: hidden;
+    background-color: var(--color-default);
+    color: var(--color-white);
 }
 
 .sp-only {
     display: none;
-    @include mq-mobile {
+    @include global.mq-mobile {
         display: block;
     }
 }
 
-@include mq-mobile {
+@include global.mq-mobile {
     .pc-only {
         display: none;
     }

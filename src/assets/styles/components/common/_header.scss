@@ -1,3 +1,13 @@
+@use '../../global' as global;
+
 .header {
     width: 100%;
+
+    &__inner {
+        width: 100%;
+
+        @include global.mq-mobile {
+            width: 100%;
+        }
+    }
 }

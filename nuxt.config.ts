@@ -98,16 +98,7 @@ const config: NuxtConfig = {
     loading: { color: '#fff', continuous: true },
 
     // Global CSS (https://go.nuxtjs.dev/config-css)
-    css: ['ress', '~/assets/styles/main.scss'],
-
-    styleResources: {
-        scss: [
-            '~/assets/styles/function/_fluid_style.scss',
-            '~/assets/styles/base/_variables.scss',
-            '~/assets/styles/base/_variables_easing.scss',
-            '~/assets/styles/function/_mixin_mq.scss',
-        ],
-    },
+    css: ['~/assets/styles/base/_index.scss'],
 
     // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
     plugins: [],
@@ -123,7 +114,6 @@ const config: NuxtConfig = {
 
     // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
     buildModules: [
-        '@nuxtjs/style-resources',
         // https://go.nuxtjs.dev/typescript
         '@nuxt/typescript-build',
         // https://go.nuxtjs.dev/stylelint

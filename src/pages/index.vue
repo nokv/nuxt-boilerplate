@@ -11,5 +11,5 @@ export default Vue.extend({});
 </script>
 
 <style lang="scss" scoped>
-@import '~assets/styles/pages/index';
+@use '~assets/styles/pages/index';
 </style>

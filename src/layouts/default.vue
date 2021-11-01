@@ -17,5 +17,5 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/styles/layout/_default';
+@use '~/assets/styles/layout/_default';
 </style>

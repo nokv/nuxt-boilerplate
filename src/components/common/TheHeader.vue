@@ -13,5 +13,5 @@ export default Vue.extend({});
 </script>
 
 <style lang="scss" scoped>
-@import '~/assets/styles/components/common/_header';
+@use '~/assets/styles/components/common/_header';
 </style>
