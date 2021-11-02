@@ -31,7 +31,6 @@
     "not dead"
   ],
   "dependencies": {
-    "@nuxtjs/pwa": "3.3.5",
     "nuxt": "2.15.8"
   },
   "devDependencies": {
@@ -41,6 +40,7 @@
     "@nuxtjs/eslint-config": "7.0.0",
     "@nuxtjs/eslint-config-typescript": "7.0.2",
     "@nuxtjs/eslint-module": "3.0.2",
+    "@nuxtjs/pwa": "3.3.5",
     "@types/fibers": "3.1.1",
     "@types/sass": "1.43.0",
     "@types/stylelint": "13.13.3",
