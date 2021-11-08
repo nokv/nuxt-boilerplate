@@ -1,13 +1,10 @@
 import type { NuxtConfig } from '@nuxt/types';
 import Sass from 'sass';
 import Fiber from 'fibers';
+import { Meta } from './config/meta';
 
 const environment = process.env.NODE_ENV || 'development';
 const isDev = environment === 'development';
-
-// meta
-const title = '';
-const description = '';
 
 const config: NuxtConfig = {
     // Nuxt target (https://nuxtjs.org/api/configuration-target)
@@ -21,7 +18,6 @@ const config: NuxtConfig = {
     router: {
         base: process.env.BASE_URL || '',
     },
-    render: {},
 
     // Global page headers (https://go.nuxtjs.dev/config-head)
     head: {
@@ -29,14 +25,18 @@ const config: NuxtConfig = {
             lang: 'ja',
             prefix: 'og: http://ogp.me/ns#',
         },
-        title,
+        title: Meta.title,
         meta: [
             { charset: 'utf-8' },
             {
                 name: 'viewport',
                 content: 'width=device-width, initial-scale=1',
             },
-            { hid: 'description', name: 'description', content: description },
+            {
+                hid: 'description',
+                name: 'description',
+                content: Meta.description,
+            },
             { httpEquiv: 'X-UA-Compatible', content: 'ie=edge' },
             { hid: 'og:type', property: 'og:type', content: 'website' },
             { hid: 'og:locale', property: 'og:locale', content: 'ja_JP' },
@@ -50,12 +50,16 @@ const config: NuxtConfig = {
                 property: 'og:image',
                 content: `${process.env.URL}/img/ogp.jpg`,
             },
-            { hid: 'og:site_name', property: 'og:site_name', content: title },
-            { hid: 'og:title', property: 'og:title', content: title },
+            {
+                hid: 'og:site_name',
+                property: 'og:site_name',
+                content: Meta.title,
+            },
+            { hid: 'og:title', property: 'og:title', content: Meta.title },
             {
                 hid: 'og:description',
                 property: 'og:description',
-                content: description,
+                content: Meta.description,
             },
             {
                 hid: 'twitter:card',
@@ -63,20 +67,10 @@ const config: NuxtConfig = {
                 content: 'summary_large_image',
             },
             { hid: 'twitter:site', property: 'twitter:site', content: '@' },
-            {
-                hid: 'twitter:creator',
-                property: 'twitter:creator',
-                content: '@',
-            },
-            {
-                hid: 'google-site-verification',
-                name: 'google-site-verification',
-                content: '',
-            },
-            { property: 'apple-mobile-web-app-title', content: title },
-            { property: 'application-name', content: title },
-            { property: 'msapplication-TileColor', content: '#ffffff' },
-            { property: 'theme-color', content: '#ffffff' },
+            { property: 'apple-mobile-web-app-title', content: Meta.title },
+            { property: 'application-name', content: Meta.title },
+            { property: 'msapplication-TileColor', content: Meta.themeColor },
+            { property: 'theme-color', content: Meta.themeColor },
             { name: 'apple-mobile-web-app-capable', content: 'yes' },
             {
                 name: 'apple-mobile-web-app-status-bar-style',
@@ -91,7 +85,6 @@ const config: NuxtConfig = {
             },
             { hid: 'canonical', rel: 'canonical', href: process.env.URL },
         ],
-        script: [],
     },
 
     // Customize the progress-bar color
@@ -120,6 +113,7 @@ const config: NuxtConfig = {
         '@nuxt/typescript-build',
         '@nuxt/postcss8',
     ],
+
     serverMiddleware: [],
 
     // Modules (https://go.nuxtjs.dev/config-modules)
@@ -148,11 +142,11 @@ const config: NuxtConfig = {
             ],
         },
         manifest: {
-            name: title,
-            short_name: title,
-            description,
-            theme_color: '#ffffff',
-            background_color: '#ffffff',
+            name: Meta.title,
+            short_name: Meta.title,
+            description: Meta.description,
+            theme_color: Meta.themeColor,
+            background_color: Meta.themeColor,
             lang: 'ja',
             display: 'standalone',
             start_url: '/?utm_source=pwa_app',
@@ -161,32 +155,6 @@ const config: NuxtConfig = {
 
     // Build Configuration (https://go.nuxtjs.dev/config-build)
     build: {
-        filenames: {
-            app: ({ isModern }) =>
-                isDev
-                    ? `[name]${isModern ? '.modern' : ''}.js`
-                    : `[name]${isModern ? '.modern' : ''}.[contenthash:7].js`,
-            chunk: ({ isModern }) =>
-                isDev
-                    ? `[name]${isModern ? '.modern' : ''}.js`
-                    : `[name]${isModern ? '.modern' : ''}.[contenthash:7].js`,
-            css: () => (isDev ? '[name].css' : '[name].[contenthash:7].css'),
-            img: () =>
-                isDev
-                    ? '[path][name].[ext]'
-                    : '[path][name].[contenthash:7].[ext]',
-            font: () =>
-                isDev
-                    ? '[path][name].[ext]'
-                    : '[path][name].[contenthash:7].[ext]',
-            video: () =>
-                isDev
-                    ? '[path][name].[ext]'
-                    : '[path][name].[contenthash:7].[ext]',
-        },
-        /*
-         ** You can extend webpack config here
-         */
         extend(config, { isClient }) {
             if (isClient) {
                 config.devtool = !isDev ? false : 'source-map';
