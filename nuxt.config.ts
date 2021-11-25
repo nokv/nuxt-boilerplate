@@ -112,6 +112,7 @@ const config: NuxtConfig = {
         // https://go.nuxtjs.dev/typescript
         '@nuxt/typescript-build',
         '@nuxt/postcss8',
+        '@nuxtjs/eslint-module',
     ],
 
     serverMiddleware: [],
