@@ -17,7 +17,6 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [14]
 
     steps:
       - name: Checkout 🛎
@@ -26,7 +25,8 @@ jobs:
       - name: Setup node env 🏗
         uses: actions/setup-node@v2.5.0
         with:
-          node-version: ${{ matrix.node }}
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
           check-latest: true
 
       - name: Get yarn cache directory path 🛠
@@ -57,7 +57,6 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [14]
 
     steps:
       - name: Checkout 🛎
@@ -66,7 +65,8 @@ jobs:
       - name: Setup node env 🏗
         uses: actions/setup-node@v2.5.0
         with:
-          node-version: ${{ matrix.node }}
+          node-version-file: '.nvmrc'
+          cache: 'yarn'
           check-latest: true
 
       - name: Get yarn cache directory path 🛠
