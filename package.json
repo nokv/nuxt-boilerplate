@@ -26,7 +26,7 @@
     "fix:style": "yarn lint:style --fix"
   },
   "browserslist": [
-    "last 2 versions",
+    "defaults",
     "not ie < 11",
     "not dead"
   ],
