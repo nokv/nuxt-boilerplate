@@ -1,6 +1,5 @@
 import type { NuxtConfig } from '@nuxt/types';
 import Sass from 'sass';
-import Fiber from 'fibers';
 import { Meta } from './config/meta';
 
 const environment = process.env.NODE_ENV || 'development';
@@ -164,9 +163,6 @@ const config: NuxtConfig = {
         loaders: {
             sass: {
                 implementation: Sass,
-                sassOptions: {
-                    fiber: Fiber,
-                },
             },
         },
         babel: {
