@@ -74,15 +74,13 @@ ol[class] {
 }
 
 .mobile-only {
-    display: none;
-
-    @include mq.mq-mobile {
-        display: block;
+    @include mq.mq-more-than-mobile {
+        display: none;
     }
 }
 
-@include mq.mq-mobile {
-    .desktop-only {
+.desktop-only {
+    @include mq.mq-mobile {
         display: none;
     }
 }
