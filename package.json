@@ -43,7 +43,6 @@
     "@nuxtjs/eslint-config-typescript": "8.0.0",
     "@nuxtjs/eslint-module": "3.0.2",
     "@nuxtjs/pwa": "3.3.5",
-    "@types/fibers": "3.1.1",
     "@types/sass": "1.43.1",
     "@types/stylelint": "13.13.3",
     "core-js": "3.20.3",
