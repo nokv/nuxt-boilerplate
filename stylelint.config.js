@@ -18,6 +18,12 @@ const config = {
                 ignorePseudoElements: ['v-deep'],
             },
         ],
+        'value-keyword-case': [
+            'lower',
+            {
+                camelCaseSvgKeywords: true,
+            },
+        ],
     },
 };
 module.exports = config;
