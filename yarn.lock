@@ -927,6 +927,11 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
+"@csstools/selector-specificity@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@csstools/selector-specificity/-/selector-specificity-2.0.2.tgz#1bfafe4b7ed0f3e4105837e056e0a89b108ebe36"
+  integrity sha512-IkpVW/ehM1hWKln4fCA3NzJU8KwD+kIOvPZA4cqxoJHtE21CCzjyp+Kxbu0i5I4tBNOlXPL9mjwnWlL0VEG4Fg==
+
 "@eslint/eslintrc@^1.2.2":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-1.2.2.tgz#4989b9e8c0216747ee7cca314ae73791bb281aae"
@@ -3338,10 +3343,10 @@ css-declaration-sorter@^4.0.1:
     postcss "^7.0.1"
     timsort "^0.3.0"
 
-css-functions-list@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/css-functions-list/-/css-functions-list-3.0.1.tgz#1460df7fb584d1692c30b105151dbb988c8094f9"
-  integrity sha512-PriDuifDt4u4rkDgnqRCLnjfMatufLmWNfQnGCq34xZwpY3oabwhB9SqRBmuvWUgndbemCFlKqg+nO7C2q0SBw==
+css-functions-list@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/css-functions-list/-/css-functions-list-3.1.0.tgz#cf5b09f835ad91a00e5959bcfc627cd498e1321b"
+  integrity sha512-/9lCvYZaUbBGvYUgYGFJ4dcYiyqdhSjG7IPVluoV8A1ILjkF7ilmhp1OGUz8n+nmBcu0RNrQAzgD8B6FJbrt2w==
 
 css-has-pseudo@^0.10.0:
   version "0.10.0"
@@ -4410,6 +4415,11 @@ fastest-levenshtein@^1.0.12:
   version "1.0.12"
   resolved "https://registry.yarnpkg.com/fastest-levenshtein/-/fastest-levenshtein-1.0.12.tgz#9990f7d3a88cc5a9ffd1f1745745251700d497e2"
   integrity sha512-On2N+BpYJ15xIC974QNVuYGMOlEVt4s0EOI3wwMqOmK1fdDY+FN/zltPV8vosq4ad4c/gJ1KHScUn/6AWIgiow==
+
+fastest-levenshtein@^1.0.16:
+  version "1.0.16"
+  resolved "https://registry.yarnpkg.com/fastest-levenshtein/-/fastest-levenshtein-1.0.16.tgz#210e61b6ff181de91ea9b3d1b84fdedd47e034e5"
+  integrity sha512-eRnCtTTtGZFpQCwhJiUOuxPQWRXVKYDn0b2PeHfXL6/Zi53SLAzAHfVhVWK2AryC/WH05kGfxhFIPvTF0SXQzg==
 
 fastq@^1.6.0:
   version "1.13.0"
@@ -5735,6 +5745,11 @@ known-css-properties@^0.24.0:
   resolved "https://registry.yarnpkg.com/known-css-properties/-/known-css-properties-0.24.0.tgz#19aefd85003ae5698a5560d2b55135bf5432155c"
   integrity sha512-RTSoaUAfLvpR357vWzAz/50Q/BmHfmE6ETSWfutT0AJiw10e6CmcdYRQJlLRd95B53D0Y2aD1jSxD3V3ySF+PA==
 
+known-css-properties@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/known-css-properties/-/known-css-properties-0.25.0.tgz#6ebc4d4b412f602e5cfbeb4086bd544e34c0a776"
+  integrity sha512-b0/9J1O9Jcyik1GC6KC42hJ41jKwdO/Mq8Mdo5sYN+IuRTXs2YFHZC3kZSx6ueusqa95x3wLYe/ytKjbAfGixA==
+
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/last-call-webpack-plugin/-/last-call-webpack-plugin-3.0.0.tgz#9742df0e10e3cf46e5c0381c2de90d3a7a2d7555"
@@ -6311,6 +6326,11 @@ nanoid@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.1.tgz#6347a18cac88af88f58af0b3594b723d5e99bb35"
   integrity sha512-n6Vs/3KGyxPQd6uO0eH4Bv0ojGSUvuLlIHtC3Y0kEO23YRge8H9x1GCzLn28YX0H66pMkxuaeESFq4tKISKwdw==
+
+nanoid@^3.3.4:
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.4.tgz#730b67e3cd09e2deacf03c027c81c9d9dbc5e8ab"
+  integrity sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==
 
 nanomatch@^1.2.9:
   version "1.2.13"
@@ -7741,7 +7761,7 @@ postcss@7.x.x, postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17,
     picocolors "^0.2.1"
     source-map "^0.6.1"
 
-postcss@8.4.12, postcss@^8.4.12:
+postcss@8.4.12:
   version "8.4.12"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.12.tgz#1e7de78733b28970fa4743f7da6f3763648b1905"
   integrity sha512-lg6eITwYe9v6Hr5CncVbK70SoioNQIq81nsaG86ev5hAidQvmOeETBqs7jm43K2F5/Ley3ytDtriImV6TpNiSg==
@@ -7758,6 +7778,15 @@ postcss@^8.1.10, postcss@^8.2.15, postcss@^8.4.5:
     nanoid "^3.1.30"
     picocolors "^1.0.0"
     source-map-js "^1.0.1"
+
+postcss@^8.4.16:
+  version "8.4.16"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.16.tgz#33a1d675fac39941f5f445db0de4db2b6e01d43c"
+  integrity sha512-ipHE1XBvKzm5xI7hiHCZJCSugxvsdq2mPnsq5+UF+VHCjiBvtDrlxJfMBToWaP9D5XlgNmcFGqoHmUn0EYEaRQ==
+  dependencies:
+    nanoid "^3.3.4"
+    picocolors "^1.0.0"
+    source-map-js "^1.0.2"
 
 prelude-ls@^1.2.1:
   version "1.2.1"
@@ -9024,21 +9053,20 @@ stylelint@*:
     v8-compile-cache "^2.3.0"
     write-file-atomic "^4.0.0"
 
-stylelint@14.7.1:
-  version "14.7.1"
-  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-14.7.1.tgz#f1b3236cbf9e1b25a04d03f76250943a58d3f37f"
-  integrity sha512-rUOWm67hrzGXXyO/cInENEejF4urh1dLgOb9cr/3XLDb/t/A+rXQp3p6+no8o8QCKTgBUdhVUq/bXMgE988PJw==
+stylelint@14.10.0:
+  version "14.10.0"
+  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-14.10.0.tgz#c588f5cd47cd214cf1acee5bc165961b6a3ad836"
+  integrity sha512-VAmyKrEK+wNFh9R8mNqoxEFzaa4gsHGhcT4xgkQDuOA5cjF6CaNS8loYV7gpi4tIZBPUyXesotPXzJAMN8VLOQ==
   dependencies:
+    "@csstools/selector-specificity" "^2.0.2"
     balanced-match "^2.0.0"
     colord "^2.9.2"
     cosmiconfig "^7.0.1"
-    css-functions-list "^3.0.1"
+    css-functions-list "^3.1.0"
     debug "^4.3.4"
-    execall "^2.0.0"
     fast-glob "^3.2.11"
-    fastest-levenshtein "^1.0.12"
+    fastest-levenshtein "^1.0.16"
     file-entry-cache "^6.0.1"
-    get-stdin "^8.0.0"
     global-modules "^2.0.0"
     globby "^11.1.0"
     globjoin "^0.1.4"
@@ -9047,21 +9075,19 @@ stylelint@14.7.1:
     import-lazy "^4.0.0"
     imurmurhash "^0.1.4"
     is-plain-object "^5.0.0"
-    known-css-properties "^0.24.0"
+    known-css-properties "^0.25.0"
     mathml-tag-names "^2.1.3"
     meow "^9.0.0"
     micromatch "^4.0.5"
     normalize-path "^3.0.0"
-    normalize-selector "^0.2.0"
     picocolors "^1.0.0"
-    postcss "^8.4.12"
+    postcss "^8.4.16"
     postcss-media-query-parser "^0.2.3"
     postcss-resolve-nested-selector "^0.1.1"
     postcss-safe-parser "^6.0.0"
     postcss-selector-parser "^6.0.10"
     postcss-value-parser "^4.2.0"
     resolve-from "^5.0.0"
-    specificity "^0.4.1"
     string-width "^4.2.3"
     strip-ansi "^6.0.1"
     style-search "^0.1.0"
